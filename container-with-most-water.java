@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/container-with-most-water/description/
 class Solution {
     // Time: O(n), Space: O(1)
+    // distance(right-left) is always decreasing, so we only have to find a taller height.
     public int maxArea(int[] height) {
         int l = height.length;
         if(l==0) return 0;
@@ -14,6 +15,7 @@ class Solution {
     }
     
     // Time: O(nlogn), Space: 0(n)
+    // Sort by height first, then decrease height one by one, so we only have to find a longer distance(right-left).
     public int maxArea2(int[] height) {
         int l = height.length;
         if(l==0) return 0;
