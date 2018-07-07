@@ -31,12 +31,8 @@ class Solution {
         }
         return s.substring(maxB,maxE);
     }
-    private void add(Map<Character, Integer> map, char c){
-        map.put(c, map.getOrDefault(c,0)+1);
-    }
-    private void sub(Map<Character, Integer> map, char c){
-        map.put(c, map.get(c)-1);
-    }
+    private void add(Map<Character, Integer> map, char c){ map.put(c, map.getOrDefault(c,0)+1); }
+    private void sub(Map<Character, Integer> map, char c){ map.put(c, map.get(c)-1); }
     private boolean isSatisfied(Map<Character, Integer> sMap, Map<Character, Integer> tMap){
         for(Map.Entry<Character, Integer> e : tMap.entrySet()){
             if(sMap.getOrDefault(e.getKey(),0) < e.getValue()) return false;
