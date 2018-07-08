@@ -11,7 +11,7 @@
 class Solution {
     // Search the deepest nodes by BFS & save every node's root history
     // Then find the deepest nodes' root with the history
-    // Time: O(n), Space: O(n)
+    // Time: O(n^2), Space: O(n)
     public TreeNode subtreeWithAllDeepest(TreeNode root) {
         ArrayDeque<TreeNode2> que = new ArrayDeque<TreeNode2>();
         ArrayDeque<ArrayDeque<TreeNode2>> queHist = new ArrayDeque<ArrayDeque<TreeNode2>>();
