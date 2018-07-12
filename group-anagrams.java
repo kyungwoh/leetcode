@@ -2,7 +2,7 @@
 // Strings only have lowercase characters, so use int[26] as a key
 // (Improved) Use int[26].hashCode() as a key + collision detection
 // String length = m, Number of strings = n
-// Time: O(mn), Space: O(mn)
+// Time: O(max(mn,26mn^2), Space: O(mn)
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<Integer, List<Node>> map = new HashMap<Integer, List<Node>>();
