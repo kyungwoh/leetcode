@@ -1,8 +1,8 @@
 // https://leetcode.com/problems/group-anagrams/description/
 // Strings only have lowercase characters, so use int[26] as a key
 // (Improved) Use int[26].hashCode() as a key + collision detection
-// String length = m, Number of strings = n
-// Time: O(max(mn,26mn^2), Space: O(mn)
+// String length = s, Number of strings = n
+// Time: O(max(sn,26sn^2)), Space: O(26sn)
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<Integer, List<Node>> map = new HashMap<Integer, List<Node>>();
