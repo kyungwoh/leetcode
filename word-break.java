@@ -75,7 +75,7 @@ class Trie{
         if(next[i]==null) next[i] = new Trie();
         return next[i];
     }
-    public String toString(){
+    /*public String toString(){
         StringBuilder sb = new StringBuilder();
         sb.append(isEnd+"(");
         for(int i=0; i<next.length; i++){
@@ -83,5 +83,5 @@ class Trie{
         }
         sb.append(")");
         return sb.toString();
-    }
+    }*/
 }
