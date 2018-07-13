@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/jewels-and-stones/description/
-// Time: O(J+S), Space: O(J)
+// Time: O(S+J), Space: O(S)
 class Solution {
     public int numJewelsInStones(String J, String S) {
         HashMap<Character,Integer> map = new HashMap<Character,Integer>();
