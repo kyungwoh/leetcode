@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/expression-add-operators/description/
 # DFS
-# Time: O(4^n), Space: same as time
+# Time: O(4^n), Space: O(n) because max(depth) = n
 class Solution(object):
     def addOperators(self, num, target):
         def dfs(remain, expr, prev, curr):
