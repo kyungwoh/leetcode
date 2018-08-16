@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/expression-add-operators/description/
 # DFS
-# Time: O(n*3^n), Space: same as time
+# Time: O(4^n), Space: same as time
 class Solution(object):
     def addOperators(self, num, target):
         def dfs(remain, expr, prev, curr):
