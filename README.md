@@ -16,7 +16,12 @@ This program takes Standard input and gives Standard output as text. You can red
 I used Prim's algorithm to find the least expensive way from the city 0 to every city, but modified that all visited cities produce new messengers. To reduce time and space, I check duplicate cases not to make the same messenger.
 
 ## Performance
+```
 V = # of vertices (n)
 E = # of edges (n^2)
-1. Time complexity: O(ElogV) using binary heap (one of implementations of Priority Queue)
-2. Space complexity: O(V^2) using adjacency matrix
+```
+- Time complexity: O(ElogV) using binary heap (one of implementations of Priority Queue)
+- Space complexity: O(V^2) using adjacency matrix
+
+## Test
+To ensure that this program works correctly, I made 5 test cases `imperialMessengers_input*.txt` and a Windows batch file `test.bat`. This enables to automate test processes for further modifications and maintenance.
