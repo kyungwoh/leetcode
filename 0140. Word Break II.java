@@ -13,6 +13,43 @@ answer list 만드는데 time O(n^2), space O(n^2)
 다 합치면 time O(2^n + n^2 + w), space O(2^n*n + n^2 + w)
 */
 class Solution {
+    String s;
+    List<String> ans;
+    Set<String> words;
+    List<Integer>[] dp;
+    public List<String> wordBreak(String s, List<String> wordDict) {
+        this.s = s;
+        ans = new ArrayList<>();
+        words = new HashSet<>(wordDict);
+        dp = new ArrayList[s.length() + 1];
+        for (int i = 0; i <= s.length(); i++) dp[i] = new ArrayList<>();
+        dp[0].add(0);
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (!dp[j].isEmpty() && words.contains(s.substring(j, i))) dp[i].add(j);
+            }
+        }
+        helper(s.length(), new LinkedList<>());
+        return ans;
+    }
+    void helper(int i, LinkedList<Integer> list) {
+        if (i == 0) {
+            StringBuilder sb = new StringBuilder();
+            int l = 0;
+            for (int r : list) {
+                if (sb.length() > 0) sb.append(' ');
+                sb.append(s.substring(l, r));
+                l = r;
+            }
+            ans.add(sb.toString());
+        } else {
+            list.addFirst(i);
+            for (int j : dp[i]) helper(j, list);
+            list.removeFirst();
+        }
+    }
+}
+class Solution {
     public List<String> wordBreak(String s, List<String> wordDict) {
         Trie head = new Trie();
         for (String w : wordDict) {

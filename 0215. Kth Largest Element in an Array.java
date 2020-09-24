@@ -1,6 +1,11 @@
 /*
 215. Kth Largest Element in an Array
-PQ에 넣어서 size() 넘을때마다 poll()하면 마지막에 k개만 남는다. time O(nlogk), space O(k). 아니면 quick select로 pivot으로 왼쪽, 오른쪽 나눠서 갯수로 찾아가도 된다. pivot == k면 pivot이 적중한거고, pivot < k면 오른쪽, >k면 왼쪽으로 가면서 찾는다. quick sort와 마찬가지로 worst O(n^2) 이지만, 특정 k번째만 찾으므로 avg O(n)까지 떨어진다. pivot을 시작점, 끝점, 중간점, 랜덤 등으로 다양하게 시도할 수 있다.
+PQ에 넣어서 size() 넘을때마다 poll()하면 마지막에 k개만 남는다. time O(nlogk), space O(k).
+
+아니면 quick select로 pivot으로 왼쪽, 오른쪽 나눠서 갯수로 찾아가도 된다.
+pivot == k면 pivot이 적중한거고, pivot < k면 오른쪽, >k면 왼쪽으로 가면서 찾는다.
+quick sort와 마찬가지로 worst O(n^2) 이지만, 특정 k번째만 찾으므로 avg O(n)까지 떨어진다.
+pivot을 시작점, 끝점, 중간점, 랜덤 등으로 다양하게 시도할 수 있다.
 */
 class Solution {
     int[] nums;
